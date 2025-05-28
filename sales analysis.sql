@@ -1,0 +1,1 @@
+select product_name, sum(total_amount) as Total_Sales, Rank() over (order by sum(total_amount) desc)as Sales_Rank from sales group by product_name limit 5;
